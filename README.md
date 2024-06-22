@@ -1,1 +1,1 @@
-Basic JAVA code for SDEt interview
+Basic JAVA code for SDET interview
