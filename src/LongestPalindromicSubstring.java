@@ -27,7 +27,10 @@ public class LongestPalindromicSubstring {
                     reversedSubString.append(subString).reverse();
                     System.out.println("ReversedSubString: " + reversedSubString);
                     if(reversedSubString.compareTo(subString) == 0){
-                        if(!hm.containsKey(String.valueOf(subString))){
+                        if(hm.isEmpty()){
+                            hm.put(String.valueOf(subString), String.valueOf(subString).length());
+                        }
+                        else if(!hm.containsKey(String.valueOf(subString)) && Collections.max(hm.values())<String.valueOf(subString).length()){
                             hm.put(String.valueOf(subString), String.valueOf(subString).length());
                         }
                     }
